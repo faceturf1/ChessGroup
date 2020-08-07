@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="" />
+    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="Added my name for testing purposes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,7 +14,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fka5AGjKj0FX4qFnhNiwJMcsC6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +27,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -51,11 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1596764358621</updated>
       <workItem from="1596764363343" duration="992000" />
+      <workItem from="1596765998029" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added my name for testing purposes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added my name for testing purposes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1596765120520">
@@ -78,5 +89,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
+    <state x="555" y="79" key="SettingsEditor" timestamp="1596766715523">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="555" y="79" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1596766715523" />
   </component>
 </project>
