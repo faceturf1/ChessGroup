@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="" />
+    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/prog/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,9 +111,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
-    <state x="862" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767072042">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767537200">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="862" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767072042" />
+    <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596767537200" />
   </component>
 </project>
