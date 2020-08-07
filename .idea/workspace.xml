@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prog/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Main.java" afterDir="false" />
     </list>
@@ -87,8 +86,16 @@
       <updated>1596764358621</updated>
       <workItem from="1596764363343" duration="992000" />
       <workItem from="1596765998029" duration="977000" />
-      <workItem from="1596767179257" duration="37000" />
+      <workItem from="1596767179257" duration="77000" />
     </task>
+    <task id="LOCAL-00001" summary="Kolby">
+      <created>1596767241311</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596767241311</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Kolby" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kolby" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1596765120520">
