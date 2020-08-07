@@ -6,6 +6,7 @@ public class Main {
         System.out.println("Testing the Connection");
         System.out.println("Test 2");
         System.out.println("Mason's works??");
-        System.out.println("Phill ??????");
+        System.out.printf("Test 3");
+
     }
 }

@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="Added my name for testing purposes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/prog/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1fka5AGjKj0FX4qFnhNiwJMcsC6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -57,22 +71,17 @@
       <option name="presentableId" value="Default" />
       <updated>1596764358621</updated>
       <workItem from="1596764363343" duration="992000" />
-      <workItem from="1596765998029" duration="720000" />
+      <workItem from="1596765998029" duration="977000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added my name for testing purposes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added my name for testing purposes" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="7" key="CommitChangelistDialog2" timestamp="1596767024887">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596767024887" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1596765120520">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -93,13 +102,21 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
-    <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1596766931652">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1596766931652" />
     <state x="555" y="79" key="SettingsEditor" timestamp="1596766715523">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="555" y="79" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1596766715523" />
+    <state x="747" y="235" key="VCS.ChangeListViewerDialog" timestamp="1596767045674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="747" y="235" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767045674" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596767068900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
+    <state x="862" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767072042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="862" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767072042" />
   </component>
 </project>
