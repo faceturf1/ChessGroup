@@ -17,7 +17,7 @@ public class CheckFile {
         Path path = Paths.get(filePath);
 
         if (Files.exists(path)) {
-            System.out.println("Yes");
+            System.out.println("Ye");
         }
 
         if (Files.notExists(path)) {
