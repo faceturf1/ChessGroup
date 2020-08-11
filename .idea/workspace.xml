@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="I have added a class with more classes within that create a whole board with all the pieces in the beginning positions/along with what color they know they are. I did not make it so it is created when a file is not mentioned.">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ConsoleIO.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConsoleIO.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess 3CPO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess 3CPO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/CheckFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +52,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kia\Desktop\School\Summer 2020\Sprint 2\Introductory Software Projects\ChessGroup\src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -65,12 +80,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -89,7 +116,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I have added a class with more classes within that create a whole board with all the pieces in the beginning positions/along with what color they know they are. I did not make it so it is created when a file is not mentioned." />
@@ -104,29 +144,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="372" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596989069973" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1596765120520">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597090257300">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597090257300" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1596765120520" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1596988884961">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1597049509637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596988884961" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597049509637" />
     <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1596988884961">
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1597049509637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596988884961" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597049509637" />
     <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1596988884961">
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1597049509637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596988884961" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597049509637" />
     <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1596988884961">
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1597049509637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596988884961" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597049509637" />
     <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1596765355878" />
     <state x="555" y="79" key="SettingsEditor" timestamp="1596766715523">
       <screen x="0" y="0" width="1536" height="864" />
