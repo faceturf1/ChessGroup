@@ -30,7 +30,7 @@ public class CheckFile {
         }
     }
 
-    public void loadBoard(){
+    public static void loadBoard(){
         String fileName = promptForString("Enter the name of your saved board: ", false);
         try{
             FileInputStream fileInputStream = new FileInputStream(fileName + ".ser");
@@ -43,7 +43,7 @@ public class CheckFile {
             ioe.printStackTrace();
         }
     }
-    public void saveBoard(){
+    public static void saveBoard(){
         String fileName = promptForString("Enter a name to save your board under: ", false);
         try{
             FileOutputStream fileOutputStream = new FileOutputStream(fileName + ".ser");
