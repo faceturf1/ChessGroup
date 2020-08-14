@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +97,8 @@
       <workItem from="1596918291810" duration="1245000" />
       <workItem from="1596988639557" duration="450000" />
       <workItem from="1597185253999" duration="606000" />
+      <workItem from="1597280930253" duration="1198000" />
+      <workItem from="1597367219857" duration="1116000" />
     </task>
     <servers />
   </component>
@@ -170,6 +169,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
+    <state x="347" y="171" key="com.intellij.ide.util.TipDialog" timestamp="1597282326164">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="347" y="171" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1597282326164" />
     <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767537200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
