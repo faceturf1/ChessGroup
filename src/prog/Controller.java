@@ -26,10 +26,5 @@ public class Controller {
         return firstPlayer;
     }
 
-   /* private void inputChecker() {
-        String invalid = input.next();
-        if(invalid.equals(" ") || invalid.equals(null)) {
-            throw new IllegalArgumentException("Input cannot be empty or invalid, please try again.");
-        }
-    }*/
+
 }
