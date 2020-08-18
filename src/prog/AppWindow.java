@@ -141,6 +141,7 @@ public class AppWindow {
         println("Searching for game files.....",false);
         try{
         fill.Run();
+        new ChessBoard();
         ChessBoard chess= new ChessBoard();
         chess.toString();
         //con.playerTurn();
