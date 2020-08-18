@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 
 public class AppWindow {
     public JFrame frame;
@@ -120,12 +121,13 @@ public class AppWindow {
         Place commands made
 
          */
-
+        //  Pattern.compile("(\\w*));
+        //m = p.matcher(line);
         try{
             if(commands[0].equalsIgnoreCase("clear")){
                 clear();
             }
-            else if(commands[0].equalsIgnoreCase("File Name-"+)){
+            else if(commands[0].equalsIgnoreCase("Please Enter A File Name")){
                 startgame();
             }
             else{
@@ -136,8 +138,12 @@ public class AppWindow {
         }
     }
     public void startgame(){
-        println("Welcome to our game",false);
-        println("If you have a file please insert a file name.",false);
-        System.out.println("The game has been initialized!");
+        CheckFile fill= new CheckFile();
+        try{
+        fill.Run();
+        }catch(IOException ex){
+            System.out.println( ex );
+        }
+        System.out.println("Searching for game files.....");
     }
 }
