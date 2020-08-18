@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/chess-8baf262c0fbcf142c8af25c1105b4c7ba7466ea1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,7 +102,8 @@
       <workItem from="1597368533273" duration="1416000" />
       <workItem from="1597605812711" duration="1536000" />
       <workItem from="1597608582313" duration="3267000" />
-      <workItem from="1597707344528" duration="952000" />
+      <workItem from="1597707344528" duration="1229000" />
+      <workItem from="1597712419029" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted ConsolIO">
       <created>1597197942613</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597618207851</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Simple taking turns method which can have colors added to players, Remember first player starts off as white">
+      <created>1597708400011</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597708400011</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,14 +184,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="631" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1597111428718" />
-    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1597618207451">
+    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1597708399424">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597618207451" />
-    <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597090257300">
+    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597708399424" />
+    <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597708601788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597090257300" />
+    <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597708601788" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1596765120520" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1597607352273">
       <screen x="0" y="0" width="1536" height="824" />
@@ -213,11 +221,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="235" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767045674" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1597618209472">
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1597708401353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597618209472" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597708401353" />
     <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767537200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
