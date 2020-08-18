@@ -98,12 +98,18 @@ class ChessBoard {
                     switch (p.chessType) {
 
                         //Prints out pieces to board
-                        case Pawn: brdStr += p.isWhite ? " ♙" : " ♟"; break; //Left is white - right is black
-                        case Rook: brdStr += p.isWhite ? " ♖" : " ♜"; break;
-                        case Nknight: brdStr += p.isWhite ? " ♘" : " ♞"; break;
-                        case Bishop: brdStr += p.isWhite ? " ♗" : " ♝"; break;
-                        case Queen: brdStr += p.isWhite ? " ♕" : " ♛"; break;
-                        case King: brdStr += p.isWhite ? " ♔" : " ♚"; break;
+                        case Pawn: brdStr += p.isWhite ? " ♙" : " ♟";
+                        break; //Left is white - right is black
+                        case Rook: brdStr += p.isWhite ? " ♖" : " ♜";
+                        break;
+                        case Nknight: brdStr += p.isWhite ? " ♘" : " ♞";
+                        break;
+                        case Bishop: brdStr += p.isWhite ? " ♗" : " ♝";
+                        break;
+                        case Queen: brdStr += p.isWhite ? " ♕" : " ♛";
+                        break;
+                        case King: brdStr += p.isWhite ? " ♔" : " ♚";
+                        break;
 
                     }
                 }
