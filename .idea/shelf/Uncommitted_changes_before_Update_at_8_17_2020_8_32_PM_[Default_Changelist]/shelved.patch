@@ -1,0 +1,251 @@
+Index: src/prog/Controller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package prog;\r\n\r\nimport java.util.Scanner;\r\n\r\npublic class Controller {\r\n    boolean firstPlayer = true; //make firstplayer white here\r\n    Scanner input = new Scanner(System.in);\r\n\r\n    private void playerTurn() {\r\n        while (true) {\r\n            if (firstPlayer /*== white type */) {\r\n                System.out.println(\"Player 1's Turn:\");\r\n                /*Make first player to black*/\r\n                firstPlayer = false;\r\n                input.next();\r\n            } else {\r\n                System.out.println(\"Player 2's Turn:\");\r\n                /*can say firstplayer is white*/\r\n                firstPlayer = true;\r\n                input.next();\r\n            }\r\n        }\r\n    }\r\n\r\n    public boolean getCurrentPlayerTurn() {\r\n        return firstPlayer;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/prog/Controller.java	(revision 413dc2813d1f68d44a18482f81332af9be33c577)
++++ src/prog/Controller.java	(date 1597716256085)
+@@ -9,12 +9,12 @@
+     private void playerTurn() {
+         while (true) {
+             if (firstPlayer /*== white type */) {
+-                System.out.println("Player 1's Turn:");
++                System.out.println("Player 1's Turn: You are White");
+                 /*Make first player to black*/
+                 firstPlayer = false;
+                 input.next();
+             } else {
+-                System.out.println("Player 2's Turn:");
++                System.out.println("Player 2's Turn: You are Black");
+                 /*can say firstplayer is white*/
+                 firstPlayer = true;
+                 input.next();
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bdf0a386-e3c4-48ea-a9d2-5563d1a49741\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/prog/ChessBoardPlain.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/prog/ChessBoardPlain.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1fka5AGjKj0FX4qFnhNiwJMcsC6\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$USER_HOME$/Desktop/chess-8baf262c0fbcf142c8af25c1105b4c7ba7466ea1\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Kia\\Desktop\\School\\Summer 2020\\Sprint 2\\Introductory Software Projects\\ChessGroup\\src\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"prog.Main\" />\r\n      <module name=\"Chess 3CPO\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"file://$PROJECT_DIR$\" />\r\n      <RunnerSettings RunnerId=\"Run\" />\r\n      <ConfigurationWrapper RunnerId=\"Run\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" BundledDictionaries=\"0\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" Dictionaries=\"0\" CorrectionsLimit=\"5\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bdf0a386-e3c4-48ea-a9d2-5563d1a49741\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1596764358621</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1596764358621</updated>\r\n      <workItem from=\"1596764363343\" duration=\"992000\" />\r\n      <workItem from=\"1596765998029\" duration=\"1743000\" />\r\n      <workItem from=\"1596918291810\" duration=\"1245000\" />\r\n      <workItem from=\"1596988639557\" duration=\"450000\" />\r\n      <workItem from=\"1597185253999\" duration=\"606000\" />\r\n      <workItem from=\"1597197795153\" duration=\"812000\" />\r\n      <workItem from=\"1597368533273\" duration=\"1416000\" />\r\n      <workItem from=\"1597605812711\" duration=\"1536000\" />\r\n      <workItem from=\"1597608582313\" duration=\"3267000\" />\r\n      <workItem from=\"1597707344528\" duration=\"1229000\" />\r\n      <workItem from=\"1597712419029\" duration=\"2481000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Deleted ConsolIO\">\r\n      <created>1597197942613</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597197942613</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\">\r\n      <created>1597369894091</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597369894091</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\">\r\n      <created>1597606539404</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597606539404</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\">\r\n      <created>1597618207851</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597618207851</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\">\r\n      <created>1597708400011</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1597708400011</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ORDER\">\r\n      <list>\r\n        <option value=\"0\" />\r\n        <option value=\"2\" />\r\n        <option value=\"3\" />\r\n        <option value=\"1\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"COLUMN_ORDER\" />\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"I have added a class with more classes within that create a whole board with all the pieces in the beginning positions/along with what color they know they are. I did not make it so it is created when a file is not mentioned.\" />\r\n    <MESSAGE value=\"Deleted ConsolIO\" />\r\n    <MESSAGE value=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Simple taking turns method which can have colors added to players, Remember first player starts off as white\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"447\" y=\"92\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1596767545011\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"864\" />\r\n    </state>\r\n    <state x=\"447\" y=\"92\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864\" timestamp=\"1596767545011\" />\r\n    <state x=\"631\" y=\"324\" key=\"#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog\" timestamp=\"1597111428718\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"864\" />\r\n    </state>\r\n    <state x=\"631\" y=\"324\" key=\"#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864\" timestamp=\"1597111428718\" />\r\n    <state x=\"0\" y=\"7\" key=\"CommitChangelistDialog2\" timestamp=\"1597708399424\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"0\" y=\"7\" key=\"CommitChangelistDialog2/0.0.1536.824@0.0.1536.824\" timestamp=\"1597708399424\" />\r\n    <state x=\"549\" y=\"178\" key=\"FileChooserDialogImpl\" timestamp=\"1597708601788\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"549\" y=\"178\" key=\"FileChooserDialogImpl/0.0.1536.824@0.0.1536.824\" timestamp=\"1597708601788\" />\r\n    <state x=\"549\" y=\"187\" key=\"FileChooserDialogImpl/0.0.1536.864@0.0.1536.864\" timestamp=\"1596765120520\" />\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1597607352273\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824\" timestamp=\"1597607352273\" />\r\n    <state width=\"1341\" height=\"221\" key=\"GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864\" timestamp=\"1597114562404\" />\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.center\" timestamp=\"1597607352273\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824\" timestamp=\"1597607352273\" />\r\n    <state width=\"1341\" height=\"221\" key=\"GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864\" timestamp=\"1597114562404\" />\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.left\" timestamp=\"1597607352273\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824\" timestamp=\"1597607352273\" />\r\n    <state width=\"1341\" height=\"221\" key=\"GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864\" timestamp=\"1597114562403\" />\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.right\" timestamp=\"1597607352273\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state width=\"1493\" height=\"210\" key=\"GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824\" timestamp=\"1597607352273\" />\r\n    <state width=\"1341\" height=\"221\" key=\"GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864\" timestamp=\"1597114562404\" />\r\n    <state x=\"555\" y=\"79\" key=\"SettingsEditor\" timestamp=\"1596766715523\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"864\" />\r\n    </state>\r\n    <state x=\"555\" y=\"79\" key=\"SettingsEditor/0.0.1536.864@0.0.1536.864\" timestamp=\"1596766715523\" />\r\n    <state x=\"747\" y=\"235\" key=\"VCS.ChangeListViewerDialog\" timestamp=\"1596767045674\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"747\" y=\"235\" key=\"VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1596767045674\" />\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1597708401353\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"552\" y=\"252\" key=\"Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1596767068900\" />\r\n    <state x=\"442\" y=\"200\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1597708401353\" />\r\n    <state x=\"690\" y=\"410\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1596767537200\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"862\" y=\"517\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1596767072042\" />\r\n    <state x=\"690\" y=\"410\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1596767537200\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 413dc2813d1f68d44a18482f81332af9be33c577)
++++ .idea/workspace.xml	(date 1597717686317)
+@@ -19,9 +19,18 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
++    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="Deleted ConsolIO">
++      <change afterPath="$PROJECT_DIR$/src/prog/Player.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/prog/Turns.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -51,7 +60,7 @@
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/chess-8baf262c0fbcf142c8af25c1105b4c7ba7466ea1" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+     <property name="node.js.detected.package.eslint" value="true" />
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.path.for.package.eslint" value="project" />
+@@ -72,6 +81,19 @@
+       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+       <RunnerSettings RunnerId="Run" />
+       <ConfigurationWrapper RunnerId="Run" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
++      <option name="arquillianRunConfiguration">
++        <value>
++          <option name="containerStateName" value="" />
++        </value>
++      </option>
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -82,7 +104,7 @@
+       </list>
+     </recent_temporary>
+   </component>
+-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+@@ -102,8 +124,7 @@
+       <workItem from="1597368533273" duration="1416000" />
+       <workItem from="1597605812711" duration="1536000" />
+       <workItem from="1597608582313" duration="3267000" />
+-      <workItem from="1597707344528" duration="1229000" />
+-      <workItem from="1597712419029" duration="2481000" />
++      <workItem from="1597707344528" duration="952000" />
+     </task>
+     <task id="LOCAL-00001" summary="Deleted ConsolIO">
+       <created>1597197942613</created>
+@@ -133,14 +154,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1597618207851</updated>
+     </task>
+-    <task id="LOCAL-00005" summary="Simple taking turns method which can have colors added to players, Remember first player starts off as white">
+-      <created>1597708400011</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1597708400011</updated>
+-    </task>
+-    <option name="localTasksCounter" value="6" />
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -161,13 +175,12 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="COLUMN_ORDER" />
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="I have added a class with more classes within that create a whole board with all the pieces in the beginning positions/along with what color they know they are. I did not make it so it is created when a file is not mentioned." />
+@@ -180,37 +193,45 @@
+       <screen x="0" y="0" width="1536" height="864" />
+     </state>
+     <state x="447" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1596767545011" />
++    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1597717295020">
++      <screen x="0" y="0" width="1920" height="1040" />
++    </state>
++    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597717295020" />
+     <state x="631" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1597111428718">
+       <screen x="0" y="0" width="1536" height="864" />
+     </state>
+     <state x="631" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1597111428718" />
+-    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1597708399424">
++    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1597618207451">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597708399424" />
+-    <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597708601788">
++    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597618207451" />
++    <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597090257300">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+-    <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597708601788" />
++    <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597090257300" />
+     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1596765120520" />
+-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1597607352273">
+-      <screen x="0" y="0" width="1536" height="824" />
++    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597716274900">
++      <screen x="0" y="0" width="1920" height="1040" />
+     </state>
++    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597716274900" />
+     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597607352273" />
+     <state width="1341" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
+-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1597607352273">
+-      <screen x="0" y="0" width="1536" height="824" />
++    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597716274900">
++      <screen x="0" y="0" width="1920" height="1040" />
+     </state>
++    <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597716274900" />
+     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597607352273" />
+     <state width="1341" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
+-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1597607352273">
+-      <screen x="0" y="0" width="1536" height="824" />
++    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597716274900">
++      <screen x="0" y="0" width="1920" height="1040" />
+     </state>
++    <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597716274900" />
+     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597607352273" />
+     <state width="1341" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597114562403" />
+-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1597607352273">
+-      <screen x="0" y="0" width="1536" height="824" />
++    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597716274900">
++      <screen x="0" y="0" width="1920" height="1040" />
+     </state>
++    <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597716274900" />
+     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597607352273" />
+     <state width="1341" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
+     <state x="555" y="79" key="SettingsEditor" timestamp="1596766715523">
+@@ -221,11 +242,11 @@
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+     <state x="747" y="235" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767045674" />
+-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1597708401353">
++    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1597618209472">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
+-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597708401353" />
++    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597618209472" />
+     <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767537200">
+       <screen x="0" y="0" width="1536" height="824" />
+     </state>
+Index: src/prog/Player.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/prog/Player.java	(date 1597717685934)
++++ src/prog/Player.java	(date 1597717685934)
+@@ -0,0 +1,37 @@
++package prog;
++
++public class Player {
++
++    enum Color {
++        BLACK,
++        WHITE
++    }
++
++    Color color;
++    int playerNum;
++
++    public Player() {
++
++    }
++
++    public Player(Color color, int playerNum) {
++        this.setColor(color);
++        this.setPlayerNum(playerNum);
++    }
++
++    public Color getColor() {
++        return color;
++    }
++
++    public void setColor(Color color) {
++        this.color = color;
++    }
++
++    public int getPlayerNum() {
++        return playerNum;
++    }
++
++    public void setPlayerNum(int playerNum) {
++        this.playerNum = playerNum;
++    }
++}
