@@ -18,7 +18,7 @@ public class AppWindow {
     public JScrollPane Scrollpane;
     public boolean trace = false;
     public StyledDocument document;
-    public AppWindow(){
+    public void makeWindow(){
         try{
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
@@ -121,29 +121,33 @@ public class AppWindow {
         Place commands made
 
          */
-        //  Pattern.compile("(\\w*));
-        //m = p.matcher(line);
-        try{
+
+
             if(commands[0].equalsIgnoreCase("clear")){
                 clear();
             }
-            else if(commands[0].equalsIgnoreCase("Please Enter A File Name")){
+            else if(commands[0].equalsIgnoreCase("Start!")){
                 startgame();
             }
             else{
-                print("Invalad Command"+sting,trace,new Color(255,155,155));
+                print("Invalad Command\n"+sting,trace,new Color(255,155,155));
             }
-        }catch(Exception ex){
-            print("Invalad Command"+sting,trace,new Color(255,155,155));
-        }
+
     }
     public void startgame(){
         CheckFile fill= new CheckFile();
+        Controller con = new Controller();
+        System.out.println("Searching for game files.....");
+        println("Searching for game files.....",false);
         try{
         fill.Run();
+        ChessBoard chess= new ChessBoard();
+        chess.toString();
+        //con.playerTurn();
+
         }catch(IOException ex){
             System.out.println( ex );
         }
-        System.out.println("Searching for game files.....");
+
     }
 }
