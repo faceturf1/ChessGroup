@@ -12,7 +12,8 @@ public class Main {
 //        System.out.println("Test Kolby joe");
 //        System.out.println("Kia's Test");
 //        System.out.println("Phill 2");
-
+        AppWindow app= new AppWindow();
+        app.makeWindow();
         //CheckFile.Run();
     }
 }

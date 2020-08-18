@@ -27,6 +27,7 @@ public class CheckFile {
             List<String> lines = Arrays.asList("The first line", "The second line");
             Path file = Paths.get("new-chess-game.txt");
             Files.write(file, lines, StandardCharsets.UTF_8);
+            new AppWindow().println("File made",false);
         }
     }
 
