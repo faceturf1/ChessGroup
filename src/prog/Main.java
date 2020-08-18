@@ -13,6 +13,6 @@ public class Main {
 //        System.out.println("Kia's Test");
 //        System.out.println("Phill 2");
 
-        CheckFile.Run();
+        //CheckFile.Run();
     }
 }

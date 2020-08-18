@@ -1,4 +1,4 @@
-package prog;
+Whatpackage prog;
 import java.io.IOException;
 import java.util.Set;
 import java.util.HashSet;
