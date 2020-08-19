@@ -1,8 +1,14 @@
 package prog;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Controller {
+    private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+
     boolean firstPlayer = true; //make firstplayer white here
     Scanner input = new Scanner(System.in);
 
@@ -27,5 +33,22 @@ public class Controller {
         return firstPlayer;
     }
 
+
+
+    public int getUserInput(int min, int max) throws IOException {
+        while(true) {
+            String rawInput = in.readLine();
+            try {
+                int input = Integer.parseInt(rawInput);
+                if (input < min || input > max) {
+                    throw new NumberFormatException();
+                }
+                return input;
+            } catch (NumberFormatException ex) {
+                System.err.println(String.format("You must enter an integer between %d and %d", min, max));
+            }
+        }
+
+    }
 
 }
