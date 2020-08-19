@@ -67,6 +67,7 @@ public class AppWindow {
                             doCommand(getInput());
                             scrollBottom();
                             input.selectAll();
+
                         }
                     }
                 });
@@ -149,6 +150,9 @@ public class AppWindow {
         Place commands made
 
          */
+        /*  if(commands[0].equalsIgnoreCase(place name of command here)){
+                clear();
+            }*/
 
 
             if(commands[0].equalsIgnoreCase("clear")){
@@ -156,6 +160,24 @@ public class AppWindow {
             }
             else if(commands[0].equalsIgnoreCase("Start!")){
                 startgame();
+            }
+            else if(commands[0].equalsIgnoreCase("Save")){
+                saveBoard();
+            }
+            else if(commands[0].equalsIgnoreCase("new-chess-game2")){
+                try{
+                    FileInputStream fileInputStream = new FileInputStream(getInput() + ".txt");
+                    ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+                    chessBoard = (ChessBoard) objectInputStream.readObject();
+                    println(chessBoard.toString(),false);
+                    objectInputStream.close();
+                    fileInputStream.close();
+                } catch (ClassNotFoundException cnfe){
+                    cnfe.printStackTrace();
+                } catch (IOException ioe){
+                    ioe.printStackTrace();
+                }
             }
             else if(commands[0].equalsIgnoreCase(" Move:"+ "(\\w)(\\d)")){
 
@@ -202,15 +224,17 @@ public class AppWindow {
             System.out.println("No file");
             List<String> lines = Arrays.asList("The first line", "The second line");
             println("Enter the name of your board: ", false);
+            setInput(input.getText());
+
             boolean isAnswered = false;
             Path file;
-            do {
 
-                file = Path.of(new AppWindow().getInput()+".txt");
+
+                file = Path.of(getInput()+".txt");
                 if (file.getFileName().equals("")){
                     isAnswered=true;
                 }
-            }while (isAnswered);
+
 
             Files.write(file, lines, StandardCharsets.UTF_8);
 
@@ -219,9 +243,12 @@ public class AppWindow {
     }
 
     public  void loadBoard(){
-        String fileName = ("Enter the name of your saved board: ");
-        try{
-            FileInputStream fileInputStream = new FileInputStream(fileName + ".txt");
+        println("Enter the name of your saved board:",false);
+        setInput(input.getText());
+
+
+        /*try{
+            FileInputStream fileInputStream = new FileInputStream(getInput() + ".txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
             chessBoard = (ChessBoard) objectInputStream.readObject();
@@ -232,20 +259,27 @@ public class AppWindow {
             cnfe.printStackTrace();
         } catch (IOException ioe){
             ioe.printStackTrace();
-        }
+        }*/
     }
-    public static void saveBoard(){
-        String fileName = "Enter a name to save your board under: ";
+    public  void saveBoard(){
+        String fileName = "new-chess-game2 ";
 
         try{
-            FileOutputStream fileOutputStream = new FileOutputStream(fileName + ".ser");
+            FileOutputStream fileOutputStream = new FileOutputStream(fileName + ".txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(chessBoard);
+
+
+            objectOutputStream.close();
+            fileOutputStream.close();
+
 
 
 
         }catch (IOException ioe) {
             ioe.printStackTrace();
         }
+        println("File was save as"+fileName,false);
     }
     public static void fixChessPieces(){
         for(int i = 0; i > 8; i++) {
