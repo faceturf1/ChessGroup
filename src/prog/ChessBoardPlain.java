@@ -4,12 +4,12 @@ import java.util.Set;
 import java.util.HashSet;
 class Chess {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
             ChessBoard board = new ChessBoard();
             System.out.println(board);
 
-    }
+    }*/
 }
 
 enum Type {
@@ -82,7 +82,7 @@ class ChessBoard {
         }
         return null;
     }
-
+    @Override
     public String toString() {
 
         String brdStr = ""; //This is the upper left corner of the printed board
