@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/ConsoleIO.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/AppWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChessGroup/src/prog/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/src/prog/AppWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChessGroup/src/prog/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGroup/src/prog/CheckFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +40,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15136719" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -69,7 +75,12 @@
       <workItem from="1596765659156" duration="336000" />
       <workItem from="1597710432254" duration="901000" />
       <workItem from="1597711454927" duration="206000" />
-      <workItem from="1597711827961" duration="3415000" />
+      <workItem from="1597711827961" duration="7512000" />
+      <workItem from="1597720407429" duration="5957000" />
+      <workItem from="1597726406605" duration="6379000" />
+      <workItem from="1597734935933" duration="2101000" />
+      <workItem from="1597764526835" duration="2694000" />
+      <workItem from="1597794557323" duration="386000" />
     </task>
     <servers />
   </component>
@@ -85,26 +96,54 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="-78" y="60" width="1510" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1597713167706" />
+    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser" timestamp="1597736669034">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="116" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1597736669034" />
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597776030571">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1597776030571" />
+    <state x="516" y="288" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1597721404253">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="516" y="288" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.864@0.0.1536.864" timestamp="1597721404253" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1597715451376">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1597715451376" />
-    <state width="726" height="220" key="GridCell.Tab.0.bottom" timestamp="1597711333369">
+    <state width="1493" height="124" key="GridCell.Tab.0.bottom" timestamp="1597776354833">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="726" height="220" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597711333369" />
-    <state width="726" height="220" key="GridCell.Tab.0.center" timestamp="1597711333369">
+    <state width="1493" height="124" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597776354833" />
+    <state width="1493" height="124" key="GridCell.Tab.0.center" timestamp="1597776354832">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="726" height="220" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597711333369" />
-    <state width="726" height="220" key="GridCell.Tab.0.left" timestamp="1597711333368">
+    <state width="1493" height="124" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597776354832" />
+    <state width="1493" height="124" key="GridCell.Tab.0.left" timestamp="1597776354832">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="726" height="220" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597711333368" />
-    <state width="726" height="220" key="GridCell.Tab.0.right" timestamp="1597711333369">
+    <state width="1493" height="124" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597776354832" />
+    <state width="1493" height="124" key="GridCell.Tab.0.right" timestamp="1597776354833">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="726" height="220" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597711333369" />
+    <state width="1493" height="124" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597776354833" />
+    <state width="1493" height="177" key="GridCell.Tab.1.bottom" timestamp="1597737038474">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="177" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597737038474" />
+    <state width="1493" height="177" key="GridCell.Tab.1.center" timestamp="1597737038474">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="177" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1597737038474" />
+    <state width="1493" height="177" key="GridCell.Tab.1.left" timestamp="1597737038474">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="177" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1597737038474" />
+    <state width="1493" height="177" key="GridCell.Tab.1.right" timestamp="1597737038474">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="177" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1597737038474" />
     <state x="914" y="158" key="RollbackChangesDialog" timestamp="1597710611070">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -117,5 +156,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="847" y="261" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1596765660215" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1597726073723">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1536.864@0.0.1536.864" timestamp="1597726073723" />
   </component>
 </project>
