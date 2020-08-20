@@ -190,19 +190,21 @@ public class AppWindow {
     public void startgame(){
         //CheckFile fill= new CheckFile();
         //Controller con = new Controller();
-        System.out.println("Searching for game files.....");
-        println("Searching for game files.....",false);
-        try{
-        Run();
-        loadBoard();
+       // System.out.println("Searching for game files.....");
+       // println("Searching for game files.....",false);
+        //try{
+        //Run();
+        //loadBoard();
 
-        ChessBoard chess= new ChessBoard();
-        chess.toString();
+        //ChessBoard chess= new ChessBoard();
+        //chess.toString();
 
 
-        }catch(IOException ex){
-            System.out.println( ex );
-        }
+        //}catch(IOException ex){
+        //    System.out.println( ex );
+        //}
+        ChessBoard board = new ChessBoard();
+        println(board.toString(),false);
 
     }
     public  void Run() throws IOException {
