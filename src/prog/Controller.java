@@ -50,5 +50,14 @@ public class Controller {
         }
 
     }
+    public static void forfeitGame(boolean playerDecider){
+        if(playerDecider == true){
+            System.out.println("Player 1 has forfeited!!, Player 2 wins");
+        }
+        else{
+            System.out.println("Player 2 has forfeited!!, Player 1 wins");
+        }
+    }
+
 
 }

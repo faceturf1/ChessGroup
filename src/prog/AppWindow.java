@@ -131,7 +131,7 @@ public class AppWindow {
 
         }
     }
-    public void println(String s,boolean trace){
+    public static void println(String s, boolean trace){
         println(s,trace, new Color(255,255,255));
     }
     public void println(String s, boolean trace, Color c){
@@ -158,12 +158,16 @@ public class AppWindow {
             if(commands[0].equalsIgnoreCase("clear")){
                 clear();
             }
-            else if(commands[0].equalsIgnoreCase("Start!")){
-                startgame();
+            else if(commands[0].equalsIgnoreCase("Forfeit")){
+                forfeit();
             }
             else if(commands[0].equalsIgnoreCase("Save")){
                 saveBoard();
             }
+            else if(commands[0].equalsIgnoreCase("Save")){
+
+            }
+
             else if(commands[0].equalsIgnoreCase("new-chess-game2")){
                 try{
                     FileInputStream fileInputStream = new FileInputStream(getInput() + ".txt");
@@ -286,6 +290,17 @@ public class AppWindow {
             if (!chessBoard.piecePlacement(i, 3).equals("▭")) {
                 chessBoard = new ChessBoard();
             }
+        }
+    }
+    public static void forfeit(){
+        Controller controller = new Controller();
+        if(controller.firstPlayer = true){
+            controller.forfeitGame(true);
+            println("Player 1 has forfeited!!, Player 2 wins", false);
+        }
+        else {
+            controller.forfeitGame(false);
+            println("Player 2 has forfeited!!, Player 1 wins", false);
         }
     }
 }
