@@ -5,14 +5,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="Added a player class">
+    <list default="true" id="4c785233-7e18-4ec5-9c1b-867ca7c9e45b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/AppWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +35,7 @@
   <component name="ProjectId" id="1fka5AGjKj0FX4qFnhNiwJMcsC6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,6 +60,18 @@
       <recent name="C:\Users\Kia\Desktop\School\Summer 2020\Sprint 2\Introductory Software Projects\ChessGroup\src" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="prog.Main" />
@@ -74,7 +89,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -185,17 +200,13 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="1" value="TOOL_WINDOW" />
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I have added a class with more classes within that create a whole board with all the pieces in the beginning positions/along with what color they know they are. I did not make it so it is created when a file is not mentioned." />
