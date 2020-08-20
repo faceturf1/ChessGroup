@@ -19,12 +19,12 @@ import java.util.List;
 
 public class AppWindow {
     public final JFrame frame= new JFrame();
-    public final JTextPane console= new JTextPane();
+    public static final JTextPane console= new JTextPane();
     public  JTextField input = new JTextField();
     public  JScrollPane Scrollpane = new JScrollPane(console);
     public boolean trace = false;
     public boolean mainmen = true;
-    public  StyledDocument document = console.getStyledDocument();
+    public  static StyledDocument document = console.getStyledDocument();
     public String Input;
     private static ChessBoard chessBoard = new ChessBoard();
 
@@ -113,7 +113,7 @@ public class AppWindow {
 
 
     }
-    public void print(String s, boolean trace, Color cooler){
+    public static void print(String s, boolean trace, Color cooler){
         Style style= console.addStyle("style",null);
         StyleConstants.setForeground(style, cooler);
         if(trace){
@@ -134,7 +134,7 @@ public class AppWindow {
     public static void println(String s, boolean trace){
         println(s,trace, new Color(255,255,255));
     }
-    public void println(String s, boolean trace, Color c){
+    public static void println(String s, boolean trace, Color c){
         print(s+"\n",trace,c);
     }
     public void clear(){
@@ -164,8 +164,8 @@ public class AppWindow {
             else if(commands[0].equalsIgnoreCase("Save")){
                 saveBoard();
             }
-            else if(commands[0].equalsIgnoreCase("Save")){
-
+            else if(commands[0].equalsIgnoreCase("Start!")){
+                startgame();
             }
 
             else if(commands[0].equalsIgnoreCase("new-chess-game2")){
