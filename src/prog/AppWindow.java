@@ -27,6 +27,7 @@ public class AppWindow {
     public  static StyledDocument document = console.getStyledDocument();
     public String Input;
     private static ChessBoard chessBoard = new ChessBoard();
+    private Controller controller = new Controller();
 
     public String getInput() {
         return Input;
@@ -67,6 +68,8 @@ public class AppWindow {
                             doCommand(getInput());
                             scrollBottom();
                             input.selectAll();
+                            controller.playerTurn();
+
 
                         }
                     }
@@ -155,7 +158,9 @@ public class AppWindow {
             }*/
 
 
-            if(commands[0].equalsIgnoreCase("clear")){
+            if(commands[0].equalsIgnoreCase("clear")) {
+            }
+            else if(commands[0].equalsIgnoreCase("Move:"+"(\\w)(\\d)")){
                 clear();
             }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
