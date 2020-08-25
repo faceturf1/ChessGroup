@@ -16,6 +16,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AppWindow {
     public final JFrame frame= new JFrame();
@@ -149,6 +151,8 @@ public class AppWindow {
     }
     public void doCommand(String sting){
         final String[] commands = sting.split(" ");
+        Pattern p = Pattern.compile("(\\w)(\\d)(\\d)"+"to"+"(\\d)(\\d)");
+        Matcher m = p.matcher(commands[0]);
         /*
         Place commands made
 
@@ -164,16 +168,18 @@ public class AppWindow {
             else if(commands[0].equalsIgnoreCase("Move")){
                println("Type in the piece you want to move \n(the letter for it and if it is knight =k or King= K)\nwith it's cordinates and he cordinates of the square you want to move it to",false);
             }
-            else if (commands[0].equalsIgnoreCase("(\\w)(\\d)(\\d)"+"to"+"(\\d)(\\d))")){
-                Character[] string1=new Character[7];
+            else if (m.find()){
+
+                Character[] string1=new Character[8];
                 string1[0]=commands[0].charAt(0);
                 string1[1] = commands[0].charAt(1);
                 string1[2]= commands[0].charAt(2);
                 string1[3]= commands[0].charAt(3);
-                string1[4]= commands[0].charAt(6);
-                string1[5]= commands[0].charAt(7);
+                string1[4]= commands[0].charAt(5);
+                string1[5]= commands[0].charAt(6);
 
                 makingaMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[4])),Integer.parseInt(String.valueOf(string1[5])));
+                println(chessBoard.toString(),false);
         }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
                 forfeit();
@@ -227,6 +233,7 @@ public class AppWindow {
         //}
         ChessBoard board = new ChessBoard();
         println(board.toString(),false);
+        println("Now type Move for info on moving a peice",false);
 
     }
     public void makingaMove(int curcolm, int currow, char peicce,int colm,int row){
