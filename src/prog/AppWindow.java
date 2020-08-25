@@ -30,6 +30,9 @@ public class AppWindow {
     public String Input;
     private static ChessBoard chessBoard = new ChessBoard();
     private Controller controller = new Controller();
+    private String invalidMove = "This move is invalid please try again.";
+
+
 
     public String getInput() {
         return Input;
@@ -71,8 +74,6 @@ public class AppWindow {
                             scrollBottom();
                             input.selectAll();
 
-
-
                         }
                     }
                 });
@@ -90,7 +91,6 @@ public class AppWindow {
                     }
                 });
 
-
                 Scrollpane.setOpaque(false);
                 Scrollpane.getViewport().setOpaque(false);
                 frame.add(input, BorderLayout.SOUTH);
@@ -103,8 +103,6 @@ public class AppWindow {
                 frame.setVisible(true);
         println("Welcome to our game of chess! Type: \nStart! \nforfeit  \nclear \n:to begin. \nAt any time during your game type Save to save your game.", false);
 
-
-
     }
 
     public void scrollTop(){
@@ -115,7 +113,6 @@ public class AppWindow {
     }
     public void print(String s, boolean trace ){
         print(s,trace,new Color(255,255,255));
-
 
     }
     public static void print(String s, boolean trace, Color cooler){
@@ -132,7 +129,6 @@ public class AppWindow {
         }
         catch(Exception ex){
             System.out.println(ex.getCause().toString());
-
 
         }
     }
@@ -160,7 +156,6 @@ public class AppWindow {
         /*  if(commands[0].equalsIgnoreCase(place name of command here)){
                 clear();
             }*/
-
 
             if(commands[0].equalsIgnoreCase("clear")) {
             }
@@ -236,31 +231,123 @@ public class AppWindow {
         println("Now type Move for info on moving a peice",false);
 
     }
-    public void makingaMove(int curcolm, int currow, char peicce,int colm,int row){
-        PieceMovement pm = new PieceMovement();
-        if(peicce=='p'){
-            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Pawn),colm,row);
+    public void makingaMove(int curcolm, int currow, char piece,int newColumn,int newRow){
+        switch (piece) {
+            case 'q':
+                queenMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
+                break;
+            case 'K':
+                kingMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
+                break;
+            case 'b':
+                bishopMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
+                break;
+            case 'r':
+                rookMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
+                break;
+            case 'k':
+                knightMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
+                break;
+            case 'p':
+                pawnMovement(curcolm, currow, piece, newRow, newColumn);
+                chessBoard.piecePlacement(newColumn,newRow);
         }
-        else if (peicce == 'b'){
-            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Bishop),colm,row);
 
-        }
-        else if(peicce == 'k'){
-            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Nknight),colm,row);
+    }
 
-        }
-        else if(peicce=='r') {
-            pm.pieceMovement(new Piece(curcolm, currow, controller.getCurrentPlayerTurn(), Type.Rook),colm,row);
-        }
-        else if (peicce=='q'){
-            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Queen),colm,row);
+    public void queenMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+        if (
+                (newColumn == curcolm++ && newRow == currow++) ||
+                        (newColumn == curcolm-- && newRow == currow--) ||
+                        (newColumn == curcolm++ && newRow == currow--) ||
+                        (newColumn == curcolm-- && newRow == currow++) ||
+                        (newColumn == curcolm++ && newRow == currow) ||
+                        (newColumn == curcolm-- && newRow == currow) ||
+                        (newRow == currow++ && newColumn == curcolm) ||
+                        (newRow == currow-- && newColumn == curcolm)
+        ) {
 
+            curcolm = newColumn;
+            currow = newRow;
         }
-        else if(peicce =='K'){
-            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.King),colm,row);
+
+    }
+
+    public void kingMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+        if (
+                (newColumn == curcolm++ && newRow == currow++) ||
+                        (newColumn == curcolm-- && newRow == currow--) ||
+                        (newColumn == curcolm++ && newRow == currow--) ||
+                        (newColumn == curcolm-- && newRow == currow++) ||
+                        (newColumn == curcolm++ && newRow == currow) ||
+                        (newColumn == curcolm-- && newRow == currow) ||
+                        (newRow == currow++ && newColumn == curcolm) ||
+                        (newRow == currow-- && newColumn == curcolm)
+        ) {
+            curcolm = newColumn;
+            currow = newRow;
+        }
+    }
+
+    public void bishopMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+        if (
+                (newColumn == curcolm++ && newRow == currow++) ||
+                        (newColumn == curcolm-- && newRow == currow--) ||
+                        (newColumn == curcolm++ && newRow == currow--) ||
+                        (newColumn == curcolm-- && newRow == currow++)
+        ) {
+            curcolm = newColumn;
+            currow = newRow;
+        }
+
+    }
+
+    public void knightMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+        if (
+                (newRow == currow + 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
+                        (newRow == currow - 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
+                        (newColumn == curcolm + 2 && (newRow == currow - 1 || newRow == currow + 1)) ||
+                        (newColumn == curcolm - 2 && (newRow == currow - 1 || newRow == currow + 1))
+        ) {
+            currow = newRow;
+            curcolm = newColumn;
+        }
+
+    }
+
+    public void rookMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+        if (newRow == currow) {
+            currow = newRow;
+        } else if (newColumn == curcolm) {
+            curcolm = newColumn;
+        } else {
+            System.out.println(invalidMove);
+        }
+
+    }
+
+    public void pawnMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+
+        if (currow == 7 && newColumn == curcolm && (newRow == currow-- || newRow == currow - 2)) {
+            currow = newRow;
+
+            if(newColumn == curcolm && newRow == currow--){
+                currow = newRow;
+            }
+
+        } else {
+            if (currow == 2 && newColumn == curcolm && (newRow == currow++ || newRow == currow + 2)) {
+                currow = newRow;
+            }
 
         }
     }
+
     public  void Run() throws IOException {
         checkExistence("C:/temp/new-chess-game.txt");
     }
@@ -337,13 +424,7 @@ public class AppWindow {
         }
         println("File was save as"+fileName,false);
     }
-    public static void fixChessPieces(){
-        for(int i = 0; i > 8; i++) {
-            if (!chessBoard.piecePlacement(i, 3).equals("▭")) {
-                chessBoard = new ChessBoard();
-            }
-        }
-    }
+
     public static void forfeit(){
         Controller controller = new Controller();
         if(controller.firstPlayer = true){
