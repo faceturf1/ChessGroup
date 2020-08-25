@@ -68,7 +68,7 @@ public class AppWindow {
                             doCommand(getInput());
                             scrollBottom();
                             input.selectAll();
-                            controller.playerTurn();
+
 
 
                         }
@@ -99,7 +99,7 @@ public class AppWindow {
                 frame.setLocationRelativeTo(null);
                 frame.setResizable(false);
                 frame.setVisible(true);
-        println("Type Start! to begin.", false);
+        println("Welcome to our game of chess! Type: \nStart! \nforfeit  \nclear \n:to begin. \nAt any time during your game type Save to save your game.", false);
 
 
 
@@ -160,9 +160,21 @@ public class AppWindow {
 
             if(commands[0].equalsIgnoreCase("clear")) {
             }
-            else if(commands[0].equalsIgnoreCase("Move:"+"(\\w)(\\d)")){
-                clear();
+            //:"+"
+            else if(commands[0].equalsIgnoreCase("Move")){
+               println("Type in the piece you want to move \n(the letter for it and if it is knight =k or King= K)\nwith it's cordinates and he cordinates of the square you want to move it to",false);
             }
+            else if (commands[0].equalsIgnoreCase("(\\w)(\\d)(\\d)"+"to"+"(\\d)(\\d))")){
+                Character[] string1=new Character[7];
+                string1[0]=commands[0].charAt(0);
+                string1[1] = commands[0].charAt(1);
+                string1[2]= commands[0].charAt(2);
+                string1[3]= commands[0].charAt(3);
+                string1[4]= commands[0].charAt(6);
+                string1[5]= commands[0].charAt(7);
+
+                makingaMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[4])),Integer.parseInt(String.valueOf(string1[5])));
+        }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
                 forfeit();
             }
@@ -171,6 +183,7 @@ public class AppWindow {
             }
             else if(commands[0].equalsIgnoreCase("Start!")){
                 startgame();
+                //controller.playerTurn();
             }
 
             else if(commands[0].equalsIgnoreCase("new-chess-game2")){
@@ -215,6 +228,31 @@ public class AppWindow {
         ChessBoard board = new ChessBoard();
         println(board.toString(),false);
 
+    }
+    public void makingaMove(int curcolm, int currow, char peicce,int colm,int row){
+        PieceMovement pm = new PieceMovement();
+        if(peicce=='p'){
+            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Pawn),colm,row);
+        }
+        else if (peicce == 'b'){
+            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Bishop),colm,row);
+
+        }
+        else if(peicce == 'k'){
+            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Nknight),colm,row);
+
+        }
+        else if(peicce=='r') {
+            pm.pieceMovement(new Piece(curcolm, currow, controller.getCurrentPlayerTurn(), Type.Rook),colm,row);
+        }
+        else if (peicce=='q'){
+            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.Queen),colm,row);
+
+        }
+        else if(peicce =='K'){
+            pm.pieceMovement(new Piece(curcolm,currow, controller.getCurrentPlayerTurn(),Type.King),colm,row);
+
+        }
     }
     public  void Run() throws IOException {
         checkExistence("C:/temp/new-chess-game.txt");

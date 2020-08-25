@@ -61,9 +61,9 @@ public class PieceMovement {
             piece.column = newColumn;
             piece.row = newRow;
         }
-        switch(newColumn){
-            case :
-        }
+       // switch(newColumn){
+       //     case :
+        //}
 
     }
 

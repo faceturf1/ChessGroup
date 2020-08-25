@@ -19,12 +19,12 @@ public class Controller {
                 new AppWindow().println("Player 1's Turn:",false);
                 /*Make first player to black*/
                 firstPlayer = false;
-                input.next();
+
             } else {
                 System.out.println("Player 2's Turn:");
                 /*can say firstplayer is white*/
                 firstPlayer = true;
-                input.next();
+
             }
         }
     }

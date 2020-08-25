@@ -5,15 +5,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdf0a386-e3c4-48ea-a9d2-5563d1a49741" name="Default Changelist" comment="Added a player class">
+    <list default="true" id="4c785233-7e18-4ec5-9c1b-867ca7c9e45b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/prog/PieceMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/CheckFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
   <component name="ProjectId" id="1fka5AGjKj0FX4qFnhNiwJMcsC6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/chess-8baf262c0fbcf142c8af25c1105b4c7ba7466ea1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -96,6 +96,7 @@
       <workItem from="1597608582313" duration="3267000" />
       <workItem from="1597707344528" duration="1229000" />
       <workItem from="1597712419029" duration="2481000" />
+      <workItem from="1597888393431" duration="6949000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted ConsolIO">
       <created>1597197942613</created>
@@ -143,7 +144,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -188,11 +189,6 @@
             <State />
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
