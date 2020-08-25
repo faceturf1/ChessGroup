@@ -81,7 +81,7 @@ public class CheckFile {
     }*/
 
     public static String promptForString(String prompt, boolean allowBlank) {
-        if (prompt == null || prompt.isBlank()) {
+        if (prompt == null || prompt.trim().isEmpty()) {
             throw new IllegalArgumentException("The prompt cannot be null, empty or just whitespece.");
         }
         BufferedReader buffy = new BufferedReader(new InputStreamReader(System.in));
@@ -96,7 +96,7 @@ public class CheckFile {
                 isInvalid = input == null;
 
                 if (!allowBlank) {
-                    isInvalid = input == null || (!allowBlank && input.isBlank());
+                    isInvalid = input == null || (!allowBlank && input.trim().isEmpty());
                 }
 
                 if (isInvalid) {
