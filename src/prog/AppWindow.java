@@ -28,7 +28,7 @@ public class AppWindow {
     public boolean mainmen = true;
     public  static StyledDocument document = console.getStyledDocument();
     public String Input;
-    private static ChessBoard chessBoard = new ChessBoard();
+    private  ChessBoard chessBoard = new ChessBoard();
     private Controller controller = new Controller();
     private String invalidMove = "This move is invalid please try again.";
 
@@ -147,7 +147,7 @@ public class AppWindow {
     }
     public void doCommand(String sting){
         final String[] commands = sting.split(" ");
-        Pattern p = Pattern.compile("(\\w)(\\d)(\\d)"+"to"+"(\\d)(\\d)");
+        Pattern p = Pattern.compile("(\\w)(\\w)(\\d)"+"to"+"(\\w)(\\d)");
         Matcher m = p.matcher(commands[0]);
         /*
         Place commands made
@@ -169,11 +169,10 @@ public class AppWindow {
                 string1[0]=commands[0].charAt(0);
                 string1[1] = commands[0].charAt(1);
                 string1[2]= commands[0].charAt(2);
-                string1[3]= commands[0].charAt(3);
-                string1[4]= commands[0].charAt(5);
-                string1[5]= commands[0].charAt(6);
+                string1[3]= commands[0].charAt(5);
+                string1[4]= commands[0].charAt(6);
 
-                makingaMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[4])),Integer.parseInt(String.valueOf(string1[5])));
+                makingaMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
                 println(chessBoard.toString(),false);
         }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
@@ -210,6 +209,7 @@ public class AppWindow {
             }
 
     }
+
     public void startgame(){
         //CheckFile fill= new CheckFile();
         //Controller con = new Controller();
@@ -234,33 +234,33 @@ public class AppWindow {
     public void makingaMove(int curcolm, int currow, char piece,int newColumn,int newRow){
         switch (piece) {
             case 'q':
-                queenMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                queenMovement(curcolm, currow, newRow, newColumn);
+
                 break;
             case 'K':
-                kingMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                kingMovement(curcolm, currow, newRow, newColumn);
+
                 break;
             case 'b':
-                bishopMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                bishopMovement(curcolm, currow, newRow, newColumn);
+
                 break;
             case 'r':
-                rookMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                rookMovement(curcolm, currow, newRow, newColumn);
+
                 break;
             case 'k':
-                knightMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                knightMovement(curcolm, currow, newRow, newColumn);
+
                 break;
             case 'p':
-                pawnMovement(curcolm, currow, piece, newRow, newColumn);
-                chessBoard.piecePlacement(newColumn,newRow);
+                pawnMovement(curcolm, currow, newRow, newColumn);
+
         }
 
     }
 
-    public void queenMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void queenMovement(int curcolm, int currow, int newRow, int newColumn) {
         if (
                 (newColumn == curcolm++ && newRow == currow++) ||
                         (newColumn == curcolm-- && newRow == currow--) ||
@@ -272,13 +272,12 @@ public class AppWindow {
                         (newRow == currow-- && newColumn == curcolm)
         ) {
 
-            curcolm = newColumn;
-            currow = newRow;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Queen);
         }
 
     }
 
-    public void kingMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void kingMovement(int curcolm, int currow, int newRow, int newColumn) {
         if (
                 (newColumn == curcolm++ && newRow == currow++) ||
                         (newColumn == curcolm-- && newRow == currow--) ||
@@ -289,60 +288,57 @@ public class AppWindow {
                         (newRow == currow++ && newColumn == curcolm) ||
                         (newRow == currow-- && newColumn == curcolm)
         ) {
-            curcolm = newColumn;
-            currow = newRow;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.King);
         }
     }
 
-    public void bishopMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void bishopMovement(int curcolm, int currow, int newRow, int newColumn) {
         if (
                 (newColumn == curcolm++ && newRow == currow++) ||
                         (newColumn == curcolm-- && newRow == currow--) ||
                         (newColumn == curcolm++ && newRow == currow--) ||
                         (newColumn == curcolm-- && newRow == currow++)
         ) {
-            curcolm = newColumn;
-            currow = newRow;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Bishop);
         }
 
     }
 
-    public void knightMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void knightMovement(int curcolm, int currow, int newRow, int newColumn) {
         if (
                 (newRow == currow + 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
                         (newRow == currow - 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
                         (newColumn == curcolm + 2 && (newRow == currow - 1 || newRow == currow + 1)) ||
                         (newColumn == curcolm - 2 && (newRow == currow - 1 || newRow == currow + 1))
         ) {
-            currow = newRow;
-            curcolm = newColumn;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Queen);
         }
 
     }
 
-    public void rookMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void rookMovement(int curcolm, int currow, int newRow, int newColumn) {
         if (newRow == currow) {
-            currow = newRow;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Rook);
         } else if (newColumn == curcolm) {
-            curcolm = newColumn;
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Rook);
         } else {
             System.out.println(invalidMove);
         }
 
     }
 
-    public void pawnMovement(int curcolm, int currow, char piece, int newRow, int newColumn) {
+    public void pawnMovement(int curcolm, int currow, int newRow, int newColumn) {
 
-        if (currow == 7 && newColumn == curcolm && (newRow == currow-- || newRow == currow - 2)) {
-            currow = newRow;
+        if (currow == 6 && newColumn == curcolm && (newRow == currow-1 || newRow == currow - 2)) {
+            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
 
             if(newColumn == curcolm && newRow == currow--){
-                currow = newRow;
+                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
             }
 
         } else {
-            if (currow == 2 && newColumn == curcolm && (newRow == currow++ || newRow == currow + 2)) {
-                currow = newRow;
+            if (currow == 1 && newColumn == curcolm && (newRow == currow+1 || newRow == currow + 2)) {
+                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
             }
 
         }
