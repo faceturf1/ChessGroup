@@ -338,7 +338,7 @@ public class AppWindow {
 
         } else {
             if (currow == 1 && newColumn == curcolm && (newRow == currow+1 || newRow == currow + 2)) {
-                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
+                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,false,Type.Pawn);
             }
 
         }
