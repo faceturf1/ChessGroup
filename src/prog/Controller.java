@@ -9,7 +9,7 @@ public class Controller {
     private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 
-    boolean firstPlayer = true; //make firstplayer white here
+    boolean firstPlayer = true; //make firstPlayer white here
     Scanner input = new Scanner(System.in);
 
     public void playerTurn() {
@@ -22,7 +22,7 @@ public class Controller {
 
             } else {
                 System.out.println("Player 2's Turn:");
-                /*can say firstplayer is white*/
+                /*can say firstPlayer is white*/
                 firstPlayer = true;
 
             }

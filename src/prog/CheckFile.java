@@ -82,7 +82,7 @@ public class CheckFile {
 
     public static String promptForString(String prompt, boolean allowBlank) {
         if (prompt == null || prompt.trim().isEmpty()) {
-            throw new IllegalArgumentException("The prompt cannot be null, empty or just whitespece.");
+            throw new IllegalArgumentException("The prompt cannot be null, empty or just whitespace.");
         }
         BufferedReader buffy = new BufferedReader(new InputStreamReader(System.in));
         String input = null;

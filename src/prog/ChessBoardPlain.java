@@ -1,8 +1,5 @@
 package prog;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Set;
-import java.util.HashSet;
+
 class Chess {
 
     public static void main(String[] args) {
@@ -26,15 +23,15 @@ enum Type {
 
 class Piece {
 
-    int Peicecolumn;
-    int Peicerow;
+    int pieceColumn;
+    int pieceRow;
     boolean isWhite; //Tile
     Type chessType;
 
     Piece(int column, int row, boolean isWhite, Type chessType) {
 
-        Peicecolumn = column;
-        Peicerow = row;
+        pieceColumn = column;
+        pieceRow = row;
         this.isWhite = isWhite;
         this.chessType = chessType;
 
@@ -88,7 +85,7 @@ class ChessBoard {
         for (Piece[] place : chessPieces) {
 
 
-                if (place.Peicecolumn == column && place.Peicerow == row) {
+                if (place.pieceColumn == column && place.pieceRow == row) {
 
                     return place;
                 }
@@ -100,7 +97,7 @@ class ChessBoard {
     public String toString() {
 
         String brdStr = ""; //This is the upper left corner of the printed board
-        brdStr += "   A  B  C   D   E  F   G  H \n";
+        brdStr += "   A  B  C   D   E   F  G  H \n";
         Piece p;
             for (int row = 0; row < 8; row++) { //Creates Rows
                 brdStr +=(row+1) + "";

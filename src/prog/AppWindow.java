@@ -23,9 +23,9 @@ public class AppWindow {
     public final JFrame frame= new JFrame();
     public static final JTextPane console= new JTextPane();
     public  JTextField input = new JTextField();
-    public  JScrollPane Scrollpane = new JScrollPane(console);
+    public  JScrollPane ScrollPane = new JScrollPane(console);
     public boolean trace = false;
-    public boolean mainmen = true;
+    //public boolean mainMen = true;
     public  static StyledDocument document = console.getStyledDocument();
     public String Input;
     private  ChessBoard chessBoard = new ChessBoard();
@@ -50,9 +50,9 @@ public class AppWindow {
             } catch (Exception ex) {
                 System.out.println("Something went wrong");
             }
-           // if(mainmen){
+           // if(mainMen){
 
-             //   mainmen = false;
+             //   mainMen = false;
 
             //else{
                 frame.setTitle("Chess");
@@ -91,10 +91,10 @@ public class AppWindow {
                     }
                 });
 
-                Scrollpane.setOpaque(false);
-                Scrollpane.getViewport().setOpaque(false);
+                ScrollPane.setOpaque(false);
+                ScrollPane.getViewport().setOpaque(false);
                 frame.add(input, BorderLayout.SOUTH);
-                frame.add(Scrollpane, BorderLayout.CENTER);
+                frame.add(ScrollPane, BorderLayout.CENTER);
                 frame.getContentPane().setBackground(new Color(75, 75, 75));
 
                 frame.setSize(660, 350);
@@ -161,7 +161,7 @@ public class AppWindow {
             }
             //:"+"
             else if(commands[0].equalsIgnoreCase("Move")){
-               println("Type in the piece you want to move \n(the letter for it and if it is knight =k or King= K)\nwith it's cordinates and he cordinates of the square you want to move it to",false);
+               println("Type in the piece you want to move \n(the letter for it and if it is knight =k or King= K)\nwith it's coordinates and he coordinates of the square you want to move it to",false);
             }
             else if (m.find()){
 
@@ -172,7 +172,7 @@ public class AppWindow {
                 string1[3]= commands[0].charAt(5);
                 string1[4]= commands[0].charAt(6);
 
-                makingaMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
+                makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
                 println(chessBoard.toString(),false);
         }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
@@ -182,7 +182,7 @@ public class AppWindow {
                 saveBoard();
             }
             else if(commands[0].equalsIgnoreCase("Start!")){
-                startgame();
+                startGame();
                 //controller.playerTurn();
             }
 
@@ -205,12 +205,12 @@ public class AppWindow {
 
             }
             else{
-                print("Invalad Command\n"+sting,trace,new Color(255,155,155));
+                print("Invalid Command\n"+sting,trace,new Color(255,155,155));
             }
 
     }
 
-    public void startgame(){
+    public void startGame(){
         //CheckFile fill= new CheckFile();
         //Controller con = new Controller();
        // System.out.println("Searching for game files.....");
@@ -228,117 +228,117 @@ public class AppWindow {
         //}
         ChessBoard board = new ChessBoard();
         println(board.toString(),false);
-        println("Now type Move for info on moving a peice",false);
+        println("Now type Move for info on moving a piece",false);
 
     }
-    public void makingaMove(int curcolm, int currow, char piece,int newColumn,int newRow){
+    public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow){
         switch (piece) {
             case 'q':
-                queenMovement(curcolm, currow, newRow, newColumn);
+                queenMovement(currentColumn, currentRow, newRow, newColumn);
 
                 break;
             case 'K':
-                kingMovement(curcolm, currow, newRow, newColumn);
+                kingMovement(currentColumn, currentRow, newRow, newColumn);
 
                 break;
             case 'b':
-                bishopMovement(curcolm, currow, newRow, newColumn);
+                bishopMovement(currentColumn, currentRow, newRow, newColumn);
 
                 break;
             case 'r':
-                rookMovement(curcolm, currow, newRow, newColumn);
+                rookMovement(currentColumn, currentRow, newRow, newColumn);
 
                 break;
             case 'k':
-                knightMovement(curcolm, currow, newRow, newColumn);
+                knightMovement(currentColumn, currentRow, newRow, newColumn);
 
                 break;
             case 'p':
-                pawnMovement(curcolm, currow, newRow, newColumn);
+                pawnMovement(currentColumn, currentRow, newRow, newColumn);
 
         }
 
     }
 
-    public void queenMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
         if (
-                (newColumn == curcolm++ && newRow == currow++) ||
-                        (newColumn == curcolm-- && newRow == currow--) ||
-                        (newColumn == curcolm++ && newRow == currow--) ||
-                        (newColumn == curcolm-- && newRow == currow++) ||
-                        (newColumn == curcolm++ && newRow == currow) ||
-                        (newColumn == curcolm-- && newRow == currow) ||
-                        (newRow == currow++ && newColumn == curcolm) ||
-                        (newRow == currow-- && newColumn == curcolm)
+                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                        (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                        (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                        (newRow == currentRow - 1 && newColumn == currentColumn)
         ) {
 
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Queen);
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
         }
 
     }
 
-    public void kingMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
         if (
-                (newColumn == curcolm++ && newRow == currow++) ||
-                        (newColumn == curcolm-- && newRow == currow--) ||
-                        (newColumn == curcolm++ && newRow == currow--) ||
-                        (newColumn == curcolm-- && newRow == currow++) ||
-                        (newColumn == curcolm++ && newRow == currow) ||
-                        (newColumn == curcolm-- && newRow == currow) ||
-                        (newRow == currow++ && newColumn == curcolm) ||
-                        (newRow == currow-- && newColumn == curcolm)
+                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                        (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                        (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                        (newRow == currentRow - 1 && newColumn == currentColumn)
         ) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.King);
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.King);
         }
     }
 
-    public void bishopMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
         if (
-                (newColumn == curcolm++ && newRow == currow++) ||
-                        (newColumn == curcolm-- && newRow == currow--) ||
-                        (newColumn == curcolm++ && newRow == currow--) ||
-                        (newColumn == curcolm-- && newRow == currow++)
+                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                        (newColumn == currentColumn - 1 && newRow == currentRow + 1)
         ) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Bishop);
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Bishop);
         }
 
     }
 
-    public void knightMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
         if (
-                (newRow == currow + 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
-                        (newRow == currow - 2 && (newColumn == curcolm - 1 || newColumn == curcolm + 1)) ||
-                        (newColumn == curcolm + 2 && (newRow == currow - 1 || newRow == currow + 1)) ||
-                        (newColumn == curcolm - 2 && (newRow == currow - 1 || newRow == currow + 1))
+                (newRow == currentRow + 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                        (newRow == currentRow - 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                        (newColumn == currentColumn + 2 && (newRow == currentRow - 1 || newRow == currentRow + 1)) ||
+                        (newColumn == currentColumn - 2 && (newRow == currentRow - 1 || newRow == currentRow + 1))
         ) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Queen);
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
         }
 
     }
 
-    public void rookMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void rookMovement(int currentColumn, int currow, int newRow, int newColumn) {
         if (newRow == currow) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Rook);
-        } else if (newColumn == curcolm) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Rook);
+            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,true,Type.Rook);
+        } else if (newColumn == currentColumn) {
+            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,true,Type.Rook);
         } else {
             System.out.println(invalidMove);
         }
 
     }
 
-    public void pawnMovement(int curcolm, int currow, int newRow, int newColumn) {
+    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
 
-        if (currow == 6 && newColumn == curcolm && (newRow == currow-1 || newRow == currow - 2)) {
-            chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
+        if (currentRow == 6 && newColumn == currentColumn && (newRow == currentRow - 1 || newRow == currentRow - 2)) {
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Pawn);
 
-            if(newColumn == curcolm && newRow == currow--){
-                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,true,Type.Pawn);
+            if(newRow == currentRow - 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Pawn);
             }
 
         } else {
-            if (currow == 1 && newColumn == curcolm && (newRow == currow+1 || newRow == currow + 2)) {
-                chessBoard.updateBoard(newRow,newColumn,currow,curcolm,false,Type.Pawn);
+            if (currentRow == 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,false,Type.Pawn);
             }
 
         }
