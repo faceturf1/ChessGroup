@@ -80,7 +80,8 @@ class ChessBoard {
             chessPieces[newRow][newColumn]= new Piece(newColumn, newRow, isWhite , type);
             chessPieces[oldRow][oldColumn]= null;
         }
-        else if(chessPieces[newRow][newColumn]!= null){
+        else if((chessPieces[newRow][newColumn]!= null)&&(chessPieces[newRow][newColumn].isWhite!=chessPieces[oldRow][oldColumn].isWhite)){
+            chessPieces[newRow][newColumn]= null;
             chessPieces[newRow][newColumn]= new Piece(newColumn, newRow, isWhite , type);
             chessPieces[oldRow][oldColumn]= null;
         }

@@ -177,15 +177,15 @@ public class AppWindow {
 
                 if(controller.firstPlayer){
                     println("Player 1's Turn:",false);
-                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),true);
+                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),controller.firstPlayer);
                     controller.firstPlayer=false;
-                    println(chessBoard.toString(),false);
+                    println(chessBoard.toString()+"\n",false);
                 }
                 else{
                     println("PLayer 2's Turn",false);
-                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),false);
+                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),controller.firstPlayer);
                     controller.firstPlayer=true;
-                    println(chessBoard.toString(),false);
+                    println(chessBoard.toString()+"\n",false);
                 }
         }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
@@ -245,15 +245,15 @@ public class AppWindow {
     public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow,boolean isWhite){
         switch (piece) {
             case 'q':
-                queenMovement(currentColumn, currentRow, newRow, newColumn);
+                queenMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
                 break;
             case 'K':
-                kingMovement(currentColumn, currentRow, newRow, newColumn);
+                kingMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
                 break;
             case 'b':
-                bishopMovement(currentColumn, currentRow, newRow, newColumn);
+                bishopMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
                 break;
             case 'r':
@@ -261,7 +261,7 @@ public class AppWindow {
 
                 break;
             case 'k':
-                knightMovement(currentColumn, currentRow, newRow, newColumn);
+                knightMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
                 break;
             case 'p':
@@ -272,7 +272,7 @@ public class AppWindow {
 
     }
 
-    public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
+    public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
         if (
                 (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
                         (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
@@ -292,7 +292,7 @@ public class AppWindow {
 
     }
 
-    public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
+    public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
         if (
                 (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
                         (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
@@ -309,7 +309,7 @@ public class AppWindow {
         }
     }
 
-    public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
+    public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
         if (
                 (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
                         (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
@@ -323,7 +323,7 @@ public class AppWindow {
         }
     }
 
-    public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
+    public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean iswhite) {
         if (
                 (newRow == currentRow + 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
                         (newRow == currentRow - 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
@@ -351,14 +351,15 @@ public class AppWindow {
 
     public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean WOB) {
 
-        if (currentRow == 6 && newColumn == currentColumn && (newRow == currentRow - 1 || newRow == currentRow - 2)) {
+        if (currentRow <= 6 && newColumn == currentColumn && (newRow == currentRow - 1 || newRow == currentRow - 2)) {
             chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
 
-            if((newColumn == currentColumn - 1||newColumn == currentColumn + 1)&&(newRow== currentRow + 1||newRow==currentRow-1)){
-                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
-            }
 
-        } else if(currentRow == 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)){
+
+        }
+        else if((newColumn == currentColumn - 1||newColumn == currentColumn + 1)&&(newRow== currentRow + 1||newRow==currentRow-1)){
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
+        }else if(currentRow >= 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)){
                 chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
             }
 
