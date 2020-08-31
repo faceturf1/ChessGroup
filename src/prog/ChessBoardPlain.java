@@ -76,23 +76,17 @@ class ChessBoard {
     }
 
     public void updateBoard(int newRow ,int newColumn,int oldRow,int oldColumn, boolean isWhite, Type type){
-        chessPieces[newRow][newColumn]= new Piece(newColumn, newRow, isWhite , type);
-        chessPieces[oldRow][oldColumn]= null;
+        if(chessPieces[newRow][newColumn]==null){
+            chessPieces[newRow][newColumn]= new Piece(newColumn, newRow, isWhite , type);
+            chessPieces[oldRow][oldColumn]= null;
+        }
+        else if(chessPieces[newRow][newColumn]!= null){
+            chessPieces[newRow][newColumn]= new Piece(newColumn, newRow, isWhite , type);
+            chessPieces[oldRow][oldColumn]= null;
+        }
     }
 
-    /*Piece piecePlacement(int column, int row) {
 
-        for (Piece[] place : chessPieces) {
-
-
-                if (place.pieceColumn == column && place.pieceRow == row) {
-
-                    return place;
-                }
-
-        }
-        return null;
-    }*/
     @Override
     public String toString() {
 
@@ -100,7 +94,7 @@ class ChessBoard {
         brdStr += "   A  B  C   D   E   F  G  H \n";
         Piece p;
             for (int row = 0; row < 8; row++) { //Creates Rows
-                brdStr +=(row+1) + "";
+                brdStr +=row + "";
                 for (int column = 0; column < 8; column++) { //Creates Columns
 
                     if (chessPieces[row][column]==null) {
@@ -131,7 +125,7 @@ class ChessBoard {
                         }
                     }
                 }
-                brdStr += " " + (1+ row) + "\n";
+                brdStr += " " +  row + "\n";
             }
             brdStr += "   A  B  C  D   E  F   G  H \n";
         return brdStr;

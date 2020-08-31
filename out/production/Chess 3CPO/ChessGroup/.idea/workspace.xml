@@ -6,54 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c785233-7e18-4ec5-9c1b-867ca7c9e45b" name="Default Changelist" comment="Added piece movement. &#10;I apologize for the wait.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/CheckFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/Chess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/ChessBoard$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/Piece.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/CheckFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/Chess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/ChessBoard$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/ChessBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/Piece.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_7_12_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_04_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/ChessGroup/null.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/Enter a name to save your board under" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/new-chess-game.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/new-chess-game2 .txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/null.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/PieceMovement$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/PieceMovement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/PieceMovement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player$Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prog/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/AppWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/PieceMovement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/CheckFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +78,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -283,30 +251,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597708399424" />
+    <state x="20" y="119" key="DiffContextDialog" timestamp="1598481610323">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="20" y="119" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1598481610323" />
     <state x="549" y="178" key="FileChooserDialogImpl" timestamp="1597708601788">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597708601788" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1596765120520" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1598399262158">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1598552357096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598399262158" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598552357096" />
     <state width="1341" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1598399262158">
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1598552357095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598399262158" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598552357095" />
     <state width="1341" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1598399262158">
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1598552357095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598399262158" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598552357095" />
     <state width="1341" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597114562403" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1598399262158">
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1598552357096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598399262158" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598552357096" />
     <state width="1341" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
     <state x="147" y="64" key="MergeDialog" timestamp="1598395656682">
       <screen x="0" y="0" width="1536" height="824" />
@@ -316,10 +288,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597802530404" />
-    <state x="725" y="222" key="RollbackChangesDialog" timestamp="1597718382441">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="580" y="176" key="RollbackChangesDialog" timestamp="1598481612965">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="725" y="222" key="RollbackChangesDialog/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597718382441" />
+    <state x="580" y="176" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598481612965" />
     <state x="498" y="0" key="SettingsEditor" timestamp="1598396645387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

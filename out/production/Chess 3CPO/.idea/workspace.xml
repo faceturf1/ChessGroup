@@ -89,7 +89,8 @@
       <workItem from="1597794557323" duration="8215000" />
       <workItem from="1597885786986" duration="4527000" />
       <workItem from="1598202457757" duration="10637000" />
-      <workItem from="1598404044195" duration="599000" />
+      <workItem from="1598404044195" duration="17955000" />
+      <workItem from="1598575757403" duration="3134000" />
     </task>
     <servers />
   </component>
@@ -121,38 +122,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1597715451376" />
-    <state width="1493" height="177" key="GridCell.Tab.0.bottom" timestamp="1598379983264">
+    <state width="726" height="2" key="GridCell.Tab.0.bottom" timestamp="1598651767166">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.0.center" timestamp="1598379983264">
+    <state width="726" height="2" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598651767166" />
+    <state width="726" height="2" key="GridCell.Tab.0.center" timestamp="1598651767166">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.0.left" timestamp="1598379983264">
+    <state width="726" height="2" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1598651767166" />
+    <state width="726" height="2" key="GridCell.Tab.0.left" timestamp="1598651767165">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.0.right" timestamp="1598379983264">
+    <state width="726" height="2" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1598651767165" />
+    <state width="726" height="2" key="GridCell.Tab.0.right" timestamp="1598651767166">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.1.bottom" timestamp="1598379983264">
+    <state width="726" height="2" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1598651767166" />
+    <state width="1493" height="177" key="GridCell.Tab.1.bottom" timestamp="1598476607644">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.1.center" timestamp="1598379983264">
+    <state width="1493" height="177" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1598476607644" />
+    <state width="1493" height="177" key="GridCell.Tab.1.center" timestamp="1598476607643">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.1.left" timestamp="1598379983264">
+    <state width="1493" height="177" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1598476607643" />
+    <state width="1493" height="177" key="GridCell.Tab.1.left" timestamp="1598476607643">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
-    <state width="1493" height="177" key="GridCell.Tab.1.right" timestamp="1598379983264">
+    <state width="1493" height="177" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1598476607643" />
+    <state width="1493" height="177" key="GridCell.Tab.1.right" timestamp="1598476607644">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="177" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598379983264" />
+    <state width="1493" height="177" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1598476607643" />
     <state x="914" y="158" key="RollbackChangesDialog" timestamp="1597710611070">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -161,10 +162,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="498" y="10" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1597715455917" />
-    <state x="414" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1598404044306">
+    <state x="414" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1598894644615">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="414" y="194" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598404044306" />
+    <state x="414" y="194" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598894644615" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1597726073723">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -175,8 +176,21 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ChessGroup/src/prog/AppWindow.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="4" />
+          <line>256</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ChessGroup/src/prog/AppWindow.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ChessGroup/src/prog/ChessBoardPlain.java</url>
+          <line>80</line>
+          <properties class="prog.ChessBoard" method="updateBoard">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

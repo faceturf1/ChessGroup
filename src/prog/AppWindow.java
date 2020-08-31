@@ -25,7 +25,7 @@ public class AppWindow {
     public  JTextField input = new JTextField();
     public  JScrollPane ScrollPane = new JScrollPane(console);
     public boolean trace = false;
-    //public boolean mainMen = true;
+
     public  static StyledDocument document = console.getStyledDocument();
     public String Input;
     private  ChessBoard chessBoard = new ChessBoard();
@@ -161,7 +161,7 @@ public class AppWindow {
             }
             //:"+"
             else if(commands[0].equalsIgnoreCase("Move")){
-               println("Type in the piece you want to move \n(the letter for it and if it is knight =k or King= K)\nwith it's coordinates and he coordinates of the square you want to move it to",false);
+               println("Type in the piece you want to move \n(the letter for the piece and if it is knight =k or King= K)\nwith it's coordinates (both as numbers example p01),the word to, and the coordinates of the square you want to move it to(example p06to05)\n Top of board is Black and Bottom is White",false);
             }
             else if (m.find()){
 
@@ -172,8 +172,21 @@ public class AppWindow {
                 string1[3]= commands[0].charAt(5);
                 string1[4]= commands[0].charAt(6);
 
-                makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
-                println(chessBoard.toString(),false);
+               // makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
+
+
+                if(controller.firstPlayer){
+                    println("Player 1's Turn:",false);
+                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),true);
+                    controller.firstPlayer=false;
+                    println(chessBoard.toString(),false);
+                }
+                else{
+                    println("PLayer 2's Turn",false);
+                    makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),false);
+                    controller.firstPlayer=true;
+                    println(chessBoard.toString(),false);
+                }
         }
             else if(commands[0].equalsIgnoreCase("Forfeit")){
                 forfeit();
@@ -201,9 +214,7 @@ public class AppWindow {
                     ioe.printStackTrace();
                 }
             }
-            else if(commands[0].equalsIgnoreCase(" Move:"+ "(\\w)(\\d)")){
 
-            }
             else{
                 print("Invalid Command\n"+sting,trace,new Color(255,155,155));
             }
@@ -231,7 +242,7 @@ public class AppWindow {
         println("Now type Move for info on moving a piece",false);
 
     }
-    public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow){
+    public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow,boolean isWhite){
         switch (piece) {
             case 'q':
                 queenMovement(currentColumn, currentRow, newRow, newColumn);
@@ -246,7 +257,7 @@ public class AppWindow {
 
                 break;
             case 'r':
-                rookMovement(currentColumn, currentRow, newRow, newColumn);
+                rookMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
                 break;
             case 'k':
@@ -254,9 +265,10 @@ public class AppWindow {
 
                 break;
             case 'p':
-                pawnMovement(currentColumn, currentRow, newRow, newColumn);
+                pawnMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
 
         }
+
 
     }
 
@@ -274,6 +286,9 @@ public class AppWindow {
 
             chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
         }
+        else {
+            println("Invalid move", false);
+        }
 
     }
 
@@ -289,6 +304,8 @@ public class AppWindow {
                         (newRow == currentRow - 1 && newColumn == currentColumn)
         ) {
             chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.King);
+        }else{
+            println("Invalid move", false);
         }
     }
 
@@ -301,7 +318,9 @@ public class AppWindow {
         ) {
             chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Bishop);
         }
-
+        else {
+            println("Invalid move", false);
+        }
     }
 
     public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
@@ -313,34 +332,38 @@ public class AppWindow {
         ) {
             chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
         }
-
-    }
-
-    public void rookMovement(int currentColumn, int currow, int newRow, int newColumn) {
-        if (newRow == currow) {
-            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,true,Type.Rook);
-        } else if (newColumn == currentColumn) {
-            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,true,Type.Rook);
-        } else {
-            System.out.println(invalidMove);
+        else{
+            println("Invalid move", false);
         }
 
     }
 
-    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn) {
+    public void rookMovement(int currentColumn, int currow, int newRow, int newColumn,boolean WOB) {
+        if (newRow == currow) {
+            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,WOB,Type.Rook);
+        } else if (newColumn == currentColumn) {
+            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,WOB,Type.Rook);
+        } else {
+            println("Invalid move", false);
+        }
+
+    }
+
+    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean WOB) {
 
         if (currentRow == 6 && newColumn == currentColumn && (newRow == currentRow - 1 || newRow == currentRow - 2)) {
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Pawn);
+            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
 
-            if(newRow == currentRow - 1){
-                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Pawn);
+            if((newColumn == currentColumn - 1||newColumn == currentColumn + 1)&&(newRow== currentRow + 1||newRow==currentRow-1)){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
             }
 
-        } else {
-            if (currentRow == 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)) {
-                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,false,Type.Pawn);
+        } else if(currentRow == 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
             }
 
+        else {
+            println("Invalid move", false);
         }
     }
 
@@ -421,9 +444,9 @@ public class AppWindow {
         println("File was save as"+fileName,false);
     }
 
-    public static void forfeit(){
-        Controller controller = new Controller();
-        if(controller.firstPlayer = true){
+    public  void forfeit(){
+
+        if(controller.firstPlayer == true){
             controller.forfeitGame(true);
             println("Player 1 has forfeited!!, Player 2 wins", false);
         }
