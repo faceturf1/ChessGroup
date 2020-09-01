@@ -5,21 +5,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c785233-7e18-4ec5-9c1b-867ca7c9e45b" name="Default Changelist" comment="Added piece movement. &#10;I apologize for the wait.">
+    <list default="true" id="4c785233-7e18-4ec5-9c1b-867ca7c9e45b" name="Default Changelist" comment="Refactored some names. Fixing on the movement logic.">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_17_2020_8_32_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_18_2020_7_59_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/AppWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/CheckFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Chess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/ChessBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Piece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess 3CPO/prog/Type.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/prog/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/AppWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/CheckFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/ChessBoardPlain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/prog/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/prog/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,19 +70,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -122,6 +101,7 @@
       <workItem from="1597888393431" duration="6949000" />
       <workItem from="1598317190330" duration="2792000" />
       <workItem from="1598395360133" duration="3914000" />
+      <workItem from="1598922610208" duration="7432000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted ConsolIO">
       <created>1597197942613</created>
@@ -172,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598317265562</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactored some names. Fixing on the movement logic.">
+      <created>1598553377413</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598553377413</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +218,8 @@
     <MESSAGE value="Simple taking turns method which can have colors added to players, Remember first player starts off as white" />
     <MESSAGE value="Added a player class" />
     <MESSAGE value="Added piece movement. &#10;I apologize for the wait." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added piece movement. &#10;I apologize for the wait." />
+    <MESSAGE value="Refactored some names. Fixing on the movement logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored some names. Fixing on the movement logic." />
   </component>
   <component name="WindowStateProjectService">
     <state x="447" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598396056989">
@@ -260,39 +248,39 @@
     </state>
     <state x="549" y="178" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597708601788" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1596765120520" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1598552357096">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1598977797073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598552357096" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598977797073" />
     <state width="1341" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1598552357095">
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1598977797072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598552357095" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598977797072" />
     <state width="1341" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1598552357095">
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1598977797072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598552357095" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598977797072" />
     <state width="1341" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1597114562403" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1598552357096">
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1598977797073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598552357096" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598977797073" />
     <state width="1341" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1597114562404" />
-    <state x="147" y="64" key="MergeDialog" timestamp="1598395656682">
+    <state x="147" y="64" key="MergeDialog" timestamp="1598922666886">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1598395656682" />
+    <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1598922666886" />
     <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1597802530404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597802530404" />
-    <state x="580" y="176" key="RollbackChangesDialog" timestamp="1598481612965">
+    <state x="580" y="176" key="RollbackChangesDialog" timestamp="1598922692808">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="725" y="222" key="RollbackChangesDialog/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597718382441" />
-    <state x="580" y="176" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598481612965" />
+    <state x="580" y="176" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598922692808" />
     <state x="498" y="0" key="SettingsEditor" timestamp="1598396645387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -302,16 +290,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="235" key="VCS.ChangeListViewerDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767045674" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1598317270003">
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2" timestamp="1598553381328">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767068900" />
     <state x="553" y="252" key="Vcs.Push.Dialog.v2/-1920.375.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597802523371" />
-    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598317270003" />
+    <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1598553381328" />
     <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596767537200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="862" y="517" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596767072042" />
     <state x="690" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596767537200" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598554657478">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598554657478" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598555735689">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598555735689" />
   </component>
 </project>

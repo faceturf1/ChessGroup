@@ -172,9 +172,6 @@ public class AppWindow {
                 string1[3]= commands[0].charAt(5);
                 string1[4]= commands[0].charAt(6);
 
-               // makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])));
-
-
                 if(controller.firstPlayer){
                     println("Player 1's Turn:",false);
                     makingAMove(Integer.parseInt(String.valueOf(string1[1])),Integer.parseInt(String.valueOf(string1[2])),string1[0],Integer.parseInt(String.valueOf(string1[3])),Integer.parseInt(String.valueOf(string1[4])),controller.firstPlayer);
@@ -198,12 +195,10 @@ public class AppWindow {
                 startGame();
                 //controller.playerTurn();
             }
-
             else if(commands[0].equalsIgnoreCase("new-chess-game2")){
                 try{
                     FileInputStream fileInputStream = new FileInputStream(getInput() + ".txt");
                     ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
                     chessBoard = (ChessBoard) objectInputStream.readObject();
                     println(chessBoard.toString(),false);
                     objectInputStream.close();
@@ -214,11 +209,9 @@ public class AppWindow {
                     ioe.printStackTrace();
                 }
             }
-
             else{
                 print("Invalid Command\n"+sting,trace,new Color(255,155,155));
             }
-
     }
 
     public void startGame(){
@@ -240,133 +233,205 @@ public class AppWindow {
         ChessBoard board = new ChessBoard();
         println(board.toString(),false);
         println("Now type Move for info on moving a piece",false);
-
     }
+
     public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow,boolean isWhite){
         switch (piece) {
             case 'q':
                 queenMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
                 break;
             case 'K':
                 kingMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
                 break;
             case 'b':
                 bishopMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
                 break;
             case 'r':
                 rookMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
                 break;
             case 'k':
                 knightMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
                 break;
             case 'p':
                 pawnMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
-
         }
-
-
     }
 
     public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
-        if (
-                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
-                        (newColumn == currentColumn + 1 && newRow == currentRow) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow) ||
-                        (newRow == currentRow + 1 && newColumn == currentColumn) ||
-                        (newRow == currentRow - 1 && newColumn == currentColumn)
-        ) {
-
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
+        if(controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                    (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                    (newRow == currentRow - 1 && newColumn == currentColumn)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Queen);
+            }
+        }else if(!controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                    (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                    (newRow == currentRow - 1 && newColumn == currentColumn)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Queen);
+            }
+        }else {
+            println(invalidMove, false);
         }
-        else {
-            println("Invalid move", false);
-        }
-
     }
 
     public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
-        if (
-                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
-                        (newColumn == currentColumn + 1 && newRow == currentRow) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow) ||
-                        (newRow == currentRow + 1 && newColumn == currentColumn) ||
-                        (newRow == currentRow - 1 && newColumn == currentColumn)
-        ) {
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.King);
-        }else{
-            println("Invalid move", false);
+        if(controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                    (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                    (newRow == currentRow - 1 && newColumn == currentColumn)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.King);
+            }
+        }else if(!controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow) ||
+                    (newRow == currentRow + 1 && newColumn == currentColumn) ||
+                    (newRow == currentRow - 1 && newColumn == currentColumn)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.King);
+            }
+        }else {
+            println(invalidMove, false);
         }
     }
 
     public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
-        if (
-                (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
-                        (newColumn == currentColumn - 1 && newRow == currentRow + 1)
-        ) {
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Bishop);
-        }
-        else {
-            println("Invalid move", false);
-        }
-    }
-
-    public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean iswhite) {
-        if (
-                (newRow == currentRow + 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
-                        (newRow == currentRow - 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
-                        (newColumn == currentColumn + 2 && (newRow == currentRow - 1 || newRow == currentRow + 1)) ||
-                        (newColumn == currentColumn - 2 && (newRow == currentRow - 1 || newRow == currentRow + 1))
-        ) {
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,true,Type.Queen);
-        }
-        else{
-            println("Invalid move", false);
-        }
-
-    }
-
-    public void rookMovement(int currentColumn, int currow, int newRow, int newColumn,boolean WOB) {
-        if (newRow == currow) {
-            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,WOB,Type.Rook);
-        } else if (newColumn == currentColumn) {
-            chessBoard.updateBoard(newRow,newColumn,currow,currentColumn,WOB,Type.Rook);
-        } else {
-            println("Invalid move", false);
-        }
-
-    }
-
-    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean WOB) {
-
-        if (currentRow <= 6 && newColumn == currentColumn && (newRow == currentRow - 1 || newRow == currentRow - 2)) {
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
-
-
-
-        }
-        else if((newColumn == currentColumn - 1||newColumn == currentColumn + 1)&&(newRow== currentRow + 1||newRow==currentRow-1)){
-            chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
-        }else if(currentRow >= 1 && newColumn == currentColumn && (newRow == currentRow + 1 || newRow == currentRow + 2)){
-                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,WOB,Type.Pawn);
+        if(controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Bishop);
             }
 
-        else {
-            println("Invalid move", false);
+        }else if(!controller.firstPlayer){
+            if (
+                    (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn + 1 && newRow == currentRow - 1) ||
+                    (newColumn == currentColumn - 1 && newRow == currentRow + 1)
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Bishop);
+            }
+
+        }else {
+            println(invalidMove, false);
         }
     }
+
+    public void knightMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
+        if(controller.firstPlayer){
+            if (
+                    (newRow == currentRow + 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                    (newRow == currentRow - 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                    (newColumn == currentColumn + 2 && (newRow == currentRow - 1 || newRow == currentRow + 1)) ||
+                    (newColumn == currentColumn - 2 && (newRow == currentRow - 1 || newRow == currentRow + 1))
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Nknight);
+            }
+
+        }else if(!controller.firstPlayer){
+            if (
+                    (newRow == currentRow + 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                    (newRow == currentRow - 2 && (newColumn == currentColumn - 1 || newColumn == currentColumn + 1)) ||
+                    (newColumn == currentColumn + 2 && (newRow == currentRow - 1 || newRow == currentRow + 1)) ||
+                    (newColumn == currentColumn - 2 && (newRow == currentRow - 1 || newRow == currentRow + 1))
+            ) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Nknight);
+            }
+
+        }else {
+            println(invalidMove, false);
+        }
+    }
+
+    public void rookMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+        if(controller.firstPlayer){
+            if (newRow == currentRow) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Rook);
+            } else if (newColumn == currentColumn) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Rook);
+            }
+        }else if(!controller.firstPlayer){
+            if (newRow == currentRow) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Rook);
+            } else if (newColumn == currentColumn) {
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Rook);
+            }
+        }else {
+            println(invalidMove, false);
+        }
+    }
+
+    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+        if(controller.firstPlayer){
+            if (currentRow == 7){
+                if(newRow == currentRow - 1 || newRow == currentRow - 2){
+                    chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+                }
+            }else if(newRow == currentRow - 1 && newColumn == currentColumn){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }
+        }else if(!controller.firstPlayer){
+            if(currentRow == 2 && newColumn == currentColumn){
+                if (newRow == currentRow + 1 || newRow == currentRow + 2){
+                    chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+                }
+            }else if(newColumn == currentColumn && newRow == currentRow + 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }
+        }else {
+            pawnCapture(currentColumn, currentRow, newRow, newColumn, isWhite);
+        }
+    }
+
+    public void pawnCapture(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite){
+        if(controller.firstPlayer && newRow == currentRow - 1){
+            if(newColumn == currentColumn - 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }else if(newColumn == currentColumn + 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }
+        }else if(!controller.firstPlayer && newRow == currentRow + 1){
+            if(newColumn == currentColumn - 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }else if(newColumn == currentColumn + 1){
+                chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Pawn);
+            }
+        }else{
+            println(invalidMove, false);
+        }
+
+    }
+
 
     public  void Run() throws IOException {
         checkExistence("C:/temp/new-chess-game.txt");
