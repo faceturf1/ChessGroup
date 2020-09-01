@@ -41,7 +41,7 @@ class ChessBoard {
 
     private Piece[][] chessPieces = new Piece[8][8];
 
-    //Adds and stores all the enum types to the hashset to be used to be placed later
+    //Adds and stores all the enum types to the 2-D Array to be used to be placed later
     ChessBoard() {
         for (int i = 0; i < chessPieces.length; i++) {
             for (int j = 0; j < chessPieces[i].length; j++) {

@@ -158,6 +158,8 @@ public class AppWindow {
             }*/
 
             if(commands[0].equalsIgnoreCase("clear")) {
+                clear();
+                chessBoard.toString();
             }
             //:"+"
             else if(commands[0].equalsIgnoreCase("Move")){
