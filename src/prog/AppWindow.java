@@ -235,29 +235,35 @@ public class AppWindow {
         println("Now type Move for info on moving a piece",false);
     }
 
-    public void makingAMove(int currentColumn, int currentRow, char piece,int newColumn,int newRow,boolean isWhite){
+    public void makingAMove(int currentColumn, int currentRow, char piece ,int newColumn, int newRow, boolean isWhite){
+        DetectCheckmate detectCheckmate = new DetectCheckmate();
+
         switch (piece) {
             case 'q':
-                queenMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                queenMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
                 break;
             case 'K':
-                kingMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                kingMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
                 break;
             case 'b':
-                bishopMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                bishopMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
                 break;
             case 'r':
-                rookMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                rookMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
                 break;
             case 'k':
-                knightMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                knightMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
                 break;
             case 'p':
-                pawnMovement(currentColumn, currentRow, newRow, newColumn,isWhite);
+                pawnMovement(currentColumn, currentRow, newRow, newColumn, isWhite);
+        }
+       detectCheckmate.detectCheckmate(chessBoard);
+        if (detectCheckmate.isCheckMate()){
+            println(detectCheckmate.getCheckMateMessage(), false);
         }
     }
 
-    public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+    public void queenMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
         if(controller.firstPlayer){
             if (
                     (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
@@ -289,7 +295,7 @@ public class AppWindow {
         }
     }
 
-    public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+    public void kingMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
         if(controller.firstPlayer){
             if (
                     (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
@@ -321,7 +327,7 @@ public class AppWindow {
         }
     }
 
-    public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+    public void bishopMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
         if(controller.firstPlayer){
             if (
                     (newColumn == currentColumn + 1 && newRow == currentRow + 1) ||
@@ -373,7 +379,7 @@ public class AppWindow {
         }
     }
 
-    public void rookMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+    public void rookMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
         if(controller.firstPlayer){
             if (newRow == currentRow) {
                 chessBoard.updateBoard(newRow,newColumn,currentRow,currentColumn,isWhite,Type.Rook);
@@ -391,7 +397,7 @@ public class AppWindow {
         }
     }
 
-    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn,boolean isWhite) {
+    public void pawnMovement(int currentColumn, int currentRow, int newRow, int newColumn, boolean isWhite) {
         if(controller.firstPlayer){
             if (currentRow == 7){
                 if(newRow == currentRow - 1 || newRow == currentRow - 2){

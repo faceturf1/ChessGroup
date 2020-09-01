@@ -6,7 +6,6 @@ class Chess {
 
             ChessBoard board = new ChessBoard();
             System.out.println(board);
-
     }
 }
 
@@ -131,6 +130,10 @@ class ChessBoard {
             brdStr += "   A  B  C  D   E  F   G  H \n";
         return brdStr;
 
+    }
+
+    public Piece[][] getChessPieces() {
+        return chessPieces;
     }
 }
 
